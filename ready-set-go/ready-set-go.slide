@@ -80,13 +80,14 @@ Multiple Returns
 
 * Closures
 
+- Go supports first-class functions
 - Easy Generator 😀
 .play code/closure.go /START OMIT/,/END OMIT/
 
 * Structs
 
-- Go does has no classes it uses structs
-- This means there is no inheritance hierarchy in Go
+- Go does has not have classes; it uses structs
+- There is no inheritance hierarchy in Go
 - First letter of identifier matters!
 .code code/structs.example /START OMIT/,/END OMIT/
 
@@ -114,13 +115,13 @@ Multiple Returns
 - How to use defer
 .play code/defer1.go /START OMIT/,/END OMIT/
 
-- How Not to use defer (Be careful in loops!)
+- How *NOT* to use defer (Be careful in loops!)
 .play code/defer2.go /START OMIT/,/END OMIT/
 
 * Errors
 
 - Go *DOES* *NOT* have Exceptions
-- The key to Go's errors is they are not special. They are just values
+- The key to Go's errors is that they are not special; They are just values
 .code code/errors.example
 
 * Panic/Recover
@@ -135,6 +136,7 @@ Multiple Returns
 - Parallelism: "simultaneous execution of computations" (doing lots at once)
 - Concurrency enables parallelism
 - Rob Pike says it better that I: [[https://www.youtube.com/watch?v=cN_DpYBzKso][Watch it HERE!]] or [[https://talks.golang.org/2012/waza.slide#1][View the deck HERE!]]
+- Go supports "green-like" threads which are multiplexed by the runtime over an internal thread pool
 
 * Goroutines
 
@@ -176,6 +178,7 @@ Multiple Returns
 
 - Generics 
 - Dependency Management(kinda)
+- Supports ideas like `map` and `filter`, but they are not built into the language
 
 * Call to Action
 
