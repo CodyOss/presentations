@@ -14,9 +14,13 @@ func panicNow() {
 	panic("HAHAHA") // HL
 }
 
-func main() {
+func doSomeWork() {
 	//defer saveMe()
 	panicNow()
+}
+
+func main() {
+	doSomeWork()
 	fmt.Println("Things are good again 😊")
 }
 

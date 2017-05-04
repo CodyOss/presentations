@@ -26,21 +26,10 @@ closs@spscommerce.com
 - Version 1 compatibility promise
 - Fast with a small footprint
 - Wicked fast compile times (and test times!)
-- Garbage collected
 - Fast to learn
 - Concurrency (Get to this later)
-- Big names use it
-
-* Who is using it?
-
-- Google
-- Dropbox
-- Docker
-- Soundcloud
-- Cloudflare
-- BBC
-
 .image images/logos.png 300 _
+
 
 * Core Concepts
 
@@ -65,18 +54,6 @@ Number of keywords
 - Java : 53!
 - Python: 33!!
 - Go: *25!!!!!!*
-
-* Variables
-
-.play code/variables.go
-
-* Functions
-
-Standard Function
-.play code/functions1.go /START OMIT/,/END OMIT/
-
-Multiple Returns
-.play code/functions2.go /START OMIT/,/END OMIT/
 
 * Closures
 
@@ -105,38 +82,20 @@ Multiple Returns
 
 .play code/interfaces.go /START OMIT/,/END OMIT/
 
-* Switch
-
-- Switches have in an implicit `break` 
-.play -edit code/switch.go /START OMIT/,/END OMIT/
-
-* Defer
-
-- How to use defer
-.play code/defer1.go /START OMIT/,/END OMIT/
-
-- How *NOT* to use defer (Be careful in loops!)
-.play code/defer2.go /START OMIT/,/END OMIT/
-
 * Errors
 
 - Go *DOES* *NOT* have Exceptions
 - The key to Go's errors is that they are not special; They are just values
 .code code/errors.example
 
-* Panic/Recover
-
-- If you just 💖 the idea of "errors" bubbling up your stack and you not having control, Go has that too! Don't use panic unless you have a good use case.
-.play -edit code/panic-recover.go /START OMIT/,/END OMIT/
-
 * Concurrency
 
+- Go supports "green-like" threads which are multiplexed by the runtime over an internal thread pool
 - Concurrency is *NOT* parallelism
 - Concurrency: "the composition of independently executing processes" (dealing with lots at once)
 - Parallelism: "simultaneous execution of computations" (doing lots at once)
 - Concurrency enables parallelism
 - Rob Pike says it better that I: [[https://www.youtube.com/watch?v=cN_DpYBzKso][Watch it HERE!]] or [[https://talks.golang.org/2012/waza.slide#1][View the deck HERE!]]
-- Go supports "green-like" threads which are multiplexed by the runtime over an internal thread pool
 
 * Goroutines
 
@@ -165,14 +124,6 @@ Multiple Returns
 - Selects are used to multiplex reading from multiple channels at once
 - If multiple channels are ready one is randomly selected
 .play code/select.go /START OMIT/,/END OMIT/
-
-* What is Go good at?
-
-- Web Servers
-.play code/web-hello-world.go
-
-- CLIs via Go's flag package
-- You can check out my Go Parcel Service CLI [[https://github.com/SPSCommerce/tsp][HERE]]
 
 * Shortcomings?
 
