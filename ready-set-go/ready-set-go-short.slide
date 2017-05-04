@@ -14,7 +14,6 @@ closs@spscommerce.com
 
 * What is Go?
 
-- Wait Go or Golang?
 - A programing language made by three greats: Robert Griesemer, Rob Pike(Plan 9 and UTF-8), and Ken Thompson(UNIX, B, and UTF-8)
 - Concurrent, Garbage Collected, and fast Compilations
 
@@ -55,32 +54,22 @@ Number of keywords
 - Python: 33!!
 - Go: *25!!!!!!*
 
-* Closures
-
-- Go supports first-class functions
-- Easy Generator 😀
-.play code/closure.go /START OMIT/,/END OMIT/
-
 * Structs
 
 - Go does has not have classes; it uses structs
 - There is no inheritance hierarchy in Go
 - First letter of identifier matters!
-.code code/structs.example /START OMIT/,/END OMIT/
-
-* Methods
-
 - Methods "attach" to structs( the combination is sort of like a class)
 - Can have value or pointer receivers
-.play code/methods.go /START OMIT/,/END OMIT/
+.code code/structs.example /START OMIT/,/END OMIT/
+
+* Methods & Interfaces
+
+.play code/methods-interfaces.go /START OMIT/,/END OMIT/
 
 * Real Meeko
 
 .image images/meeko.jpg 500 _
-
-* Interfaces
-
-.play code/interfaces.go /START OMIT/,/END OMIT/
 
 * Errors
 
@@ -128,7 +117,7 @@ Number of keywords
 * Shortcomings?
 
 - Generics 
-- Dependency Management(kinda)
+- Dependency Management(WIP [[https://github.com/golang/dep][dep]])
 - Supports ideas like `map` and `filter`, but they are not built into the language
 
 * Call to Action
