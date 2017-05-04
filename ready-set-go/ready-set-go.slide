@@ -45,7 +45,7 @@ closs@spscommerce.com
 * Core Concepts
 
 - Compiled
-- Cross Compiling Binarys
+- Cross Compiling Binaries
 - Statically typed
 - Clean syntax
 - Concurrency primitives
@@ -92,7 +92,7 @@ Multiple Returns
 
 * Methods
 
-- Methods "attach" to structs( the comibination is sort of like a class)
+- Methods "attach" to structs( the combination is sort of like a class)
 - Can have value or pointer receivers
 .play code/methods.go /START OMIT/,/END OMIT/
 
@@ -138,7 +138,7 @@ Multiple Returns
 
 * Goroutines
 
-- Simply puting the word `go` in front of a `func` starts it in a new "thread"
+- Simply putting the word `go` in front of a `func` starts it in a new "thread"
 .play -edit code/goroutines.go /START OMIT/,/END OMIT/
 
 * Channels
@@ -151,7 +151,7 @@ Multiple Returns
 - "If the channel has a buffer, the sender blocks only until the value has been copied to the buffer; if the buffer is full, this means waiting until some receiver has retrieved a value."
 .play -edit code/channel2.go /START OMIT/,/END OMIT/
 
-- Buffered channels can be used very effectively to pipeline data beteween work pools of goroutines operating on channels.
+- Buffered channels can be used very effectively to pipeline data between work pools of goroutines operating on channels.
 
 * Synchronize via Channels
 
@@ -175,7 +175,7 @@ Multiple Returns
 * Shortcomings?
 
 - Generics 
-- Dependency Managment(kinda)
+- Dependency Management(kinda)
 
 * Call to Action
 
