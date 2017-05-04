@@ -1,0 +1,8 @@
+// START OMIT
+type Dog struct {
+	Name		   string 	// Other packages can see my Name
+	Breed		  string 	// and my Breed
+	age			int  	  // but not my age
+	favoriteToy	string	 // or favoriteToy
+}
+//END OMIT

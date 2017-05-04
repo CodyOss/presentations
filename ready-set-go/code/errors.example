@@ -1,0 +1,14 @@
+// getRequest accepts a path and returns a byte slice of output and
+// a response code or an error
+func getRequest(path string) ([]byte, int, error) {
+	r, err := http.Get(path)
+	if err != nil {
+		return nil, 0, err
+	}
+	defer r.Body.Close()
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		return nil, 0, err
+	}
+	return body, r.StatusCode, nil
+}
