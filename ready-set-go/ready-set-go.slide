@@ -143,6 +143,10 @@ Multiple Returns
 - Simply putting the word `go` in front of a `func` starts it in a new "thread"
 .play -edit code/goroutines.go /START OMIT/,/END OMIT/
 
+* ... Wow
+
+.image images/micdrop.png 500 _
+
 * Channels
 
 - "Do not communicate by sharing memory; instead, share memory by communicating."
@@ -210,6 +214,7 @@ Have a rewrite or a green-field app coming up? *Consider* *Go!*
 - halyph.com/blog/2016/11/28/prog-lang-reserved-words.html
 - gobyexample.com
 - blog.golang.org/concurrency-is-not-parallelism
+- Ashley McNamara: mic drop gopher
 
 * Questions?
 
