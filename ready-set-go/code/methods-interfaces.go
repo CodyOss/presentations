@@ -16,7 +16,7 @@ type Dog struct { // Implicitly a Pet because it fulfills the interface
 func (d Dog) Name() string { // Value receiver
 	return d.name
 }
-func (d *Dog) FavoriteToy() string { //Pointer receiver
+func (d Dog) FavoriteToy() string { //Pointer receiver would start with (d *Dog)
 	return d.favoriteToy
 }
 
