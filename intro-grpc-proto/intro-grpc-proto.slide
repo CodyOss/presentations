@@ -1,0 +1,79 @@
+gPRC and Protocol Buffers
+An introduction
+15 Nov 2017
+Tags: intro, proto, grpc
+
+Cody Oss
+Software Engineer, SPS Commerce
+closs@spscommerce.com
+@imossome
+
+* Who am I?
+.image /images/gopher-cody.png 500 _
+
+* The Beginning -- XML
+- Human readable/editable
+- Can be parsed w/o schema
+- SOAP/WSDL (literally are two four letter words...)
+- Great tooling
+- Very Verbose
+
+* The Journey -- JSON
+- Human readable/editable
+- Can be parsed w/o schema
+- Great for browsers
+- Less verbose than the past
+
+* The Destination -- Protocol Buffers
+- Very dense data
+- Hard to decode w/o schema (its binary data)
+- VERY fast processing
+- Not intended for human eyes
+
+* What is a Protocol Buffer
+- “... are a way of encoding structured data in an efficient yet extensible format”
+- ... its schema that is type safe and allows for compact data
+- Supported in: Java, C++, Python, Objective-C, C#, Ruby, JavaScript, Go
+
+* Protocol Buffers over XML
+- 3 to 10 times smaller
+- 20 to 100 times faster
+
+* Protocol Buffers over JSON
+.code code/small-message.json
+- JSON: 32 bytes
+- ProBuf: 7 bytes
+
+* What is gRPC
+- Allows to communicate /w protocol buffers over HTTP2 (by default could use /w JSON)
+- Support for unary, one-to-many, many-to-one, and bi-directional streaming of data
+
+* Live Coding Time!
+
+* Pitfalls
+- Smaller community and JSON/REST
+- Not yet supported in every language
+- Human readability
+- Not good for modeling data that has structure to it like HTML
+
+* How can I learn more?
+.link https://developers.google.com/protocol-buffers/docs/proto3 Proto3
+.link http://www.grpc.io/docs/ gRPC
+.link http://www.grpc.io/docs/quickstart/go.html Go tutorial
+.link http://www.grpc.io/docs/quickstart/java.html Java tutorial
+.link http://www.grpc.io/docs/quickstart/python.html Python tutorial
+
+* Refs & Reading material
+- http://stackoverflow.com/questions/14028293/google-protocol-buffers-vs-json-vs-xml
+- https://github.com/dcodeIO/protobuf.js/wiki/protobuf.js-vs-JSON (Size example)
+- http://blog.codeclimate.com/blog/2014/06/05/choose-protocol-buffers/
+- http://www.grpc.io/docs/
+- https://developers.google.com/protocol-buffers/
+- https://auth0.com/blog/beating-json-performance-with-protobuf/
+- https://developers.google.com/protocol-buffers/docs/overview
+
+
+* Questions?
+
+Thank you!
+.image images/questions.jpg 400 _
