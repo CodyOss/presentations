@@ -10,9 +10,9 @@ func pullWorkOffChannels(ch1, ch2 chan string) {
 	for { // A while loop in Go (aka unbound for loop)
 		select { // HL
 		case msg := <-ch1: // HL
-			fmt.Println(msg)
+			fmt.Println("CH1: " + msg)
 		case msg := <-ch2: // HL
-			fmt.Println(msg)
+			fmt.Println("CH2: " + msg)
 		case <-time.After(3 * time.Second): // HL
 			return
 		}

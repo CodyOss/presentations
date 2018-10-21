@@ -1,0 +1,221 @@
+Ready, Set, Go!
+An introduction to golang
+21 Oct 2018
+Tags: intro, golang, concurrency
+
+Cody Oss
+Engineer, Target
+the.cody.oss@gmail.com
+@imossome
+
+* Who am I?
+
+.image images/gopher-cody-2018.png 500 _
+
+* What is Go?
+
+- Wait Go or Golang?
+- A programing language made by three greats: Robert Griesemer, Rob Pike(Plan 9 and UTF-8), and Ken Thompson(UNIX, B, and UTF-8)
+- Concurrent, Garbage Collected, and fast Compilations
+
+.image images/gopher.png 300 _
+
+
+* Why Go?
+
+- Version 1 compatibility promise
+- Fast with a small footprint
+- Wicked fast compile times (and test times!)
+- Garbage collected
+- Fast to learn
+- Concurrency (Get to this later)
+- Big names use it
+
+* Who is using it?
+
+- Google
+- Dropbox
+- Docker
+- Soundcloud
+- Cloudflare
+- BBC
+
+.image images/logos.png 300 _
+
+* Core Concepts
+
+- *Cross* *Compiling* *Binaries*
+- *Great* *tooling*
+- Compiled
+- Statically typed
+- Clean syntax
+- Concurrency primitives
+- Open Source
+- Garbage Collected
+
+* Hello world
+
+.play code/hello-world.go
+
+* Keywords
+
+.code code/keywords.example
+Number of keywords
+- C++: 92
+- Java: 53
+- Kotlin: 47
+- Python: 33
+- Go: *25!!!!!!*
+
+* Variables
+
+.play code/variables.go
+
+* Functions
+
+Standard Function
+.play code/functions1.go /START OMIT/,/END OMIT/
+
+Multiple Returns
+.play code/functions2.go /START OMIT/,/END OMIT/
+
+* Closures
+
+- Go supports first-class functions
+- Easy Generator 😀
+.play code/closure.go /START OMIT/,/END OMIT/
+
+* Structs
+
+- Go does has not have classes; it uses structs
+- There is no inheritance hierarchy in Go
+- First letter of identifier matters!
+.code code/structs.example /START OMIT/,/END OMIT/
+
+* Methods
+
+- Methods "attach" to structs( the combination is sort of like a class)
+- Can have value or pointer receivers
+.play code/methods-2018.go /START OMIT/,/END OMIT/
+
+* Real Sven
+
+.image images/sven.jpg 550 _
+
+* Interfaces
+
+.play code/interfaces-2018.go /START OMIT/,/END OMIT/
+
+* Switch
+
+- Switches have in an implicit `break` 
+.play -edit code/switch.go /START OMIT/,/END OMIT/
+
+* Defer
+
+- How to use defer
+.play code/defer1.go /START OMIT/,/END OMIT/
+
+- How *NOT* to use defer (Be careful in loops!)
+.play code/defer2.go /START OMIT/,/END OMIT/
+
+* Errors
+
+- Go *DOES* *NOT* have Exceptions
+- The key to Go's errors is that they are not special; They are just values
+.code code/errors.example
+
+* Panic/Recover
+
+- If you just 💖 the idea of "exceptions" bubbling up your stack and you not having control, Go has that too! Don't use panic unless you have a good use case.
+.play -edit code/panic-recover.go /START OMIT/,/END OMIT/
+
+* Concurrency
+
+- Concurrency is *NOT* parallelism
+- Concurrency: "the composition of independently executing processes" (dealing with lots at once)
+- Parallelism: "simultaneous execution of computations" (doing lots at once)
+- Concurrency enables parallelism
+- Rob Pike says it better that I: [[https://www.youtube.com/watch?v=cN_DpYBzKso][Watch it HERE!]] or [[https://talks.golang.org/2012/waza.slide#1][View the deck HERE!]]
+- Go supports "green-like threads" which are multiplexed by the runtime over an internal thread pool
+
+* Goroutines
+
+- Simply putting the word `go` in front of a `func` starts it in a new "thread"(aka goroutine/coroutine)
+.play -edit code/goroutines.go /START OMIT/,/END OMIT/
+
+* ... Wow
+
+.image images/micdrop.png 500 _
+
+* Channels
+
+- "Do not communicate by sharing memory; instead, share memory by communicating."
+- "If the channel is unbuffered, the sender blocks until the receiver has received the value"
+.play code/channel1.go /START OMIT/,/END OMIT/
+
+* Buffered Channels
+- "If the channel has a buffer, the sender blocks only until the value has been copied to the buffer; if the buffer is full, this means waiting until some receiver has retrieved a value."
+.play -edit code/channel2.go /START OMIT/,/END OMIT/
+
+- Buffered channels can be used very effectively to pipeline data between work pools of goroutines operating on channels.
+
+* Synchronize via Channels
+
+- Because we now know channels are blocking we can use them to synchronize goroutines
+.play code/channel3.go /START OMIT/,/END OMIT/
+
+* Select
+
+- Selects are used to multiplex reading from multiple channels at once
+- If multiple channels are ready one is randomly selected
+.play code/select.go /START OMIT/,/END OMIT/
+
+* What is Go good at?
+
+- Web Servers
+.play code/web-hello-world.go
+
+- CLIs via Go's flag package & libraries like [[https://github.com/spf13/cobra][Cobra]]
+
+* Shortcomings?
+
+- Generics 
+- Supports ideas like functional `map` and `filter`, but they are not built into the language
+
+* Call to Action
+
+- Go has a small concise standard lib
+- Readable 
+- Fast to pick up
+- Fast builds 
+- Fast processing with concurrency
+
+Have a rewrite or a green-field app coming up? *Consider* *Go!*
+
+* How can I learn more?
+
+.link https://golang.org/dl/ Installing Go
+.link https://tour.golang.org Tour of Go
+.link https://golang.org/doc/effective_go.html Effective Go
+.link https://www.meetup.com/Minneapolis-Ultimate-Golang/ Minneapolis Go Meetup
+.link https://gobyexample.com/ Go by Example
+.link https://gowebexamples.github.io/ Go Web by Example
+.link https://thenewstack.io/make-a-restful-json-api-go/ REST API Example
+.link https://gopherize.me/gopher/4602ca00649b4c9b3214a0a825db6be08fc6790f My Gopher
+.link https://gopherize.me/ Make Yours!
+
+* Refs
+
+- golang.org
+- github.com/corylanou/go-1-hour-boot-camp
+- clipartpanda.com
+- halyph.com/blog/2016/11/28/prog-lang-reserved-words.html
+- gobyexample.com
+- blog.golang.org/concurrency-is-not-parallelism
+- Ashley McNamara: mic drop gopher
+
+* Questions?
+
+Thank you!
+.image images/questions.jpg 400 _
