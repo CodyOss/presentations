@@ -2,7 +2,7 @@
 
 ## 1 Viewing the slides
 ### 1.1 Online
-* Can view slides online at https://talks.godoc.org/github.com/CodyOss/presentations/ready-set-go-2018/ready-set-go-2018.slide#1
+* Can view slides online at https://talks.godoc.org/github.com/CodyOss/presentations/ready-set-go/ready-set-go-2018.slide#1
 
 ### 1.2 On my local machine
 1. Install Go. Directions here: [HERE](https://golang.org/doc/install)
