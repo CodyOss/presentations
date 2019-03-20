@@ -1,0 +1,105 @@
+Event Processing with Go
+Event all the things
+21 Oct 2018
+Tags: intro, golang, concurrency
+
+Cody Oss
+Sr Engineer, Target
+the.cody.oss@gmail.com
+@imossome
+
+* Who am I?
+
+.image images/gopher-cody-2018.png 500 _
+
+* Where to begin...
+
+.image images/rewind.jpg 500 _
+
+* Message Brokers
+
+- Pattern designed to decouple the communication between several applications
+- Traditional use case is Pub/Sub and request/reply
+- Four main parts: Producer, Subscriber(Consumer), Broker, Queue(Channel, Topic, Exchange)
+- Examples of pub/sub: Apache ActiveMQ, AWS SQS, GCP Cloud Pub/Sub, RabbitMQ, etc.  
+
+* Message Brokers cnt.
+
+- Producers send messages on a queue to the Broker
+- Any consumers subscribed to that queue will receive the message from the Broker
+- Multiple subscribers can listen to the same queue, each receiving its own copy of the message
+
+* The downfall of traditional Message Brokers
+
+- Having a smart broker can have degrading effects on performance
+- Often the more consumers you have per queue reduces throughput
+- Most were not made to be distributed from the get-go
+- Can't replay messages
+
+* Enter the "modern" message broker
+
+- Apache Kafka
+
+.image images/kafka-logo-basic.jpg 100 _
+
+- NATS
+
+.image images/nats-logo.png 100 _
+
+* Kafka Overview
+
+- Fast
+- Scalable
+- Durable
+- Distributed
+- Via configuration it can be: fault tolerant, replicated, and partitioned 
+
+.image images/kafka-logo.png 300 _
+
+* Kafka Basics
+
+- At least once delivery( or exactly once if you use certain frameworks)
+- The messages are durable in the form of a giant commit log w/ a TTL (append only)
+- The server is distributed so it can scale
+- Messages have a key and a value. This can be useful for message ordering if needed
+
+* Kafka Architecture
+
+.image images/kafka-overview.jpg 500 _
+
+* Kafka Partition Breakdown
+
+.image images/kafka-partition.png 500 _
+
+* NATS Overview
+
+- A more traditional message broker system
+- Pub/Sub, fire forget, request reply
+- protocol is just plain text, easy to telnet
+- Any byte data can be sent via messages
+- No headers
+- NATS streaming server makes it act like Kafka
+
+* NATS Streaming Overview
+
+- Pretty much Kafka except:
+- No message keying
+- No need for zookeeper(uses Raft consensus)
+- Better perf for single node deploys than Kafka
+- limited built-in support for third-party tech integrations
+
+* NATS Streaming cnt.
+
+.image images/nats-diagram.png 300 _
+
+* Lets Hack
+
+.image images/hack.jpg 500 _
+
+
+* Why Streaming
+
+- All your data is event streams
+- You can replay in case of errors
+- Great for scaling data pipelining
+- Enables use of other cool tech like: Apache Flink, Apache Spark, Kafka Streams, goka, gleam, etc...
